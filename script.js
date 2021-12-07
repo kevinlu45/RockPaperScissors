@@ -57,4 +57,18 @@ function game(){
     }
 }
 
-game();
+const buttons = document.querySelectorAll(('#playbutton'));
+const result = document.querySelector('#result');
+const pscore = document.querySelector('#playerScore');
+const cscore = document.querySelector('#computerScore');
+buttons.forEach(button => {
+    button.addEventListener('click', () => {
+        let x = playSingleRound(button.textContent,computerPlay());
+        result.textContent = x;
+        if (x.charAt(4).toLowerCase() == 'w'){
+            pscore.textContent = (parseInt(pscore.textContent)+1).toString();
+        } else if (x.charAt(4).toLowerCase() == 'l'){
+            cscore.textContent = (parseInt(cscore.textContent)+1).toString();
+        }
+    });
+});

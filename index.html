@@ -5,11 +5,23 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <script type = "text/javascript"> 
-        // console.log(computerPlay());
-    </script>  
+<div class="top">
+    <button id="playbutton">Rock</button>
+    <button id="playbutton">Paper</button>
+    <button id="playbutton">Scissors</button>
+</div>
+<div class="bottom" id="result"></div>
+<div class="scores">
+    <div class="poop">
+        <div>Player:</div><div id="playerScore">0</div> 
+    </div>
+    <div class="poop">
+        <div>Computer:</div><div id="computerScore">0</div>
+    </div>
+</div>
 </body>
 </html>
